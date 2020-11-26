@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+{% block content %}
+<ul>
+		<li class="vertical"><a href="{{url_for('Posts.Add_Post')}}">Add_Post</a></li>
+		<li class="vertical"><a href="{{url_for('Posts.Contact_list')}}">Contact_Info</a></li>
+		<li class="vertical"><a href="{{url_for('User.logout')}}">Logout</a></li>
+	</ul>
+{% endblock %}

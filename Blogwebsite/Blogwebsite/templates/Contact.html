@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="hims">
+<form method="POST" autocomplete="off">
+{{ f.hidden_tag() }}
+<div class="formfields">
+<ul>
+<li>{{ f.Name.label }}</li>
+<li>{{ f.Name() }}</li>
+<li>{{ f.Email.label }}</li>
+<li>{{ f.Email() }}</li>
+<li>{{ f.Subject.label }}</li>
+<li>{{ f.Subject() }}</li>
+<li>{{ f.Message.label }}</li>
+<li>{{ f.Message() }}</li>
+<li>{{ f.Submit() }}</li>
+</ul>
+</div>
+</form>
+</div>
+{% endblock %}

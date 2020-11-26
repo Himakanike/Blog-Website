@@ -1,0 +1,17 @@
+{% extends "base.html"%}
+{% block content %}
+<div class="hims">
+<form method='POST' action="{{ url_for('Posts.Add_Post') }}" autocomplete="off">
+	{{ f.hidden_tag() }}
+	<div class="formfields">
+	<ul>
+	<li>{{f.Title.label}}</li>
+	<li>{{f.Title()}}</li>
+	<li>{{f.Content.label}}</li>
+	<li>{{f.Content()}}</li>
+	<li>{{f.Submit()}}</li>
+	</ul>
+</form>
+</div>
+
+{% endblock %}

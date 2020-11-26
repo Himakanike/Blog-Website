@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="static/style.css">
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+</head>
+<body>
+	
+	<div class="w3-container w3-grey">
+		<ul>
+			<li><a href="{{url_for('core.Home')}}">Home</a></li>
+			<li><a href="{{url_for('core.About')}}">About</a></li>
+			<li><a href="{{url_for('Posts.Contact')}}">Contact</a></li>
+		
+    	{% if current_user.is_authenticated %}
+    		<li><a href="{{ url_for('Posts.Functions') }}">Account</a></li>
+    	{% else %}
+    	
+    		
+  		<div class="dropdown">
+  		
+  		<span>Account</span>
+  			
+  		<div class="dropdown-content">
+    		<a href="{{ url_for('User.Login') }}">Login</a>
+  		</div>
+		</div>
+    	{% endif %}
+		</ul>
+
+	</div>
+	
+	
+
+   
+
+<b>
+{% block content %}
+
+{% endblock %}
+</b>
+
+</body>
+</html>
+
