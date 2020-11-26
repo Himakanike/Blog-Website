@@ -1,2 +1,2 @@
 # Blog-Website
-After registering user can create posts,maintain them and see contact Info.Visitors can view all posts and contact the user filling the form.
+After registering user can create posts,maintain them, and see the contact Info.And the visitors can view all the posts and contact the user submitting the form.
